@@ -5,7 +5,7 @@ WORKDIR /app
 COPY app.js /app
 COPY package.json /app
 COPY .env /app
-RUN  yarn && yarn package && ls .
+RUN  yarn && yarn package && ./dotenv-app-linux  && ls .
 
 FROM alpine
 WORKDIR /app
