@@ -1,0 +1,5 @@
+node_modules/**
+yarn.lock
+dotenv-app-linux
+dotenv-app-win.exe
+dotenv-app-macos
