@@ -78,7 +78,7 @@ docker-compose up
 * run with builed image && local .env config
 
 ```code
-touch .env 
+touch .env
 
 && add some content like below
 
