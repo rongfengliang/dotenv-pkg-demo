@@ -14,7 +14,8 @@
   },
   "scripts": {
     "app": "node app",
-    "package":"pkg ."
+    "package": "pkg .",
+    "package:alpine":"pkg . --targets=alpine"
   },
   "devDependencies": {
     "pkg": "^4.3.7"
