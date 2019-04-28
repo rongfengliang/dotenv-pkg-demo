@@ -58,3 +58,19 @@ you can change .env file see some changes
 
 best practices  is not commit .env file for scm
 ```
+
+## with docker running
+
+> for reduce image size build with --targets=alpine args
+
+* build image
+
+```code
+docker-compose build
+```
+
+* running
+
+```code
+docker-compose up 
+```
