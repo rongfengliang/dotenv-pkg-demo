@@ -12,6 +12,6 @@ WORKDIR /app
 COPY --from=build /app/dotenv-app /app
 COPY --from=build /app/.env /app
 COPY start.sh /app
-RUN apk add --update && apk  add glib  && \
+RUN apk add --update && apk  add glib  libc6-compat  && \
     chmod +x /app/dotenv-app
 ENTRYPOINT [ "./dotenv-app" ]
