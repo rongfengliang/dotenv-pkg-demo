@@ -1,2 +1,2 @@
 #!/bin/sh
-/app/dotenv-app-alpine
+/app/dotenv-app
