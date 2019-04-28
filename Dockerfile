@@ -11,7 +11,6 @@ FROM alpine
 WORKDIR /app
 COPY --from=build /app/dotenv-app /app
 COPY --from=build /app/.env /app
-COPY start.sh /app
 RUN apk add --update && apk  add  libstdc++  && \
     chmod +x /app/dotenv-app
 ENTRYPOINT [ "./dotenv-app" ]
