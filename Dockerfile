@@ -5,11 +5,13 @@ WORKDIR /app
 COPY app.js /app
 COPY package.json /app
 COPY .env /app
-RUN  yarn && yarn package
+RUN  yarn && yarn package && ls .
+
 FROM alpine
 WORKDIR /app
 COPY --from=build /app/dotenv-app-linux /app
 COPY --from=build /app/.env /app
+COPY start.sh /app
 RUN apk add --update && apk  add glib  && \
-    chmod +x /app/dotenv-app-linux
-ENTRYPOINT [ "./dotenv-app-linux" ]
+    chmod +x /app/dotenv-app-linux && chmod +x /app/start.sh
+ENTRYPOINT [ "./start.sh" ]
