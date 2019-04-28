@@ -72,5 +72,18 @@ docker-compose build
 * running
 
 ```code
-docker-compose up 
+docker-compose up
+```
+
+* run with builed image && local .env config
+
+```code
+touch .env 
+
+&& add some content like below
+
+name  = 荣锋亮
+age =  33
+platform = userlogin-app
+docker run -it -v $PWD/.env:/app/.env dalongrong/dotenv-alpine-demo
 ```
